@@ -28,9 +28,7 @@ export const loginUser = createAsyncThunk<
     );
     return response.data;
   } catch (e: any) {
-    return thunkAPI.rejectWithValue(
-      e.response?.data?.error || "Unknown error"
-    );
+    return thunkAPI.rejectWithValue(e.response?.data?.error || "Unknown error");
   }
 });
 
