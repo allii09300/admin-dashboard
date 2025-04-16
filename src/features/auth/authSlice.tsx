@@ -29,7 +29,7 @@ export const loginUser = createAsyncThunk<
     return response.data;
   } catch (e: any) {
     return thunkAPI.rejectWithValue(
-      e.response?.data?.error || "خطای نا شناخته"
+      e.response?.data?.error || "Unknown error"
     );
   }
 });
@@ -57,7 +57,7 @@ const authSlice = createSlice({
     );
     builder.addCase(loginUser.rejected, (state, action) => {
       state.token = null;
-      state.error = action.payload || "خطای ناشناخته";
+      state.error = action.payload || "Unknown error";
       state.status = "failed";
     });
   },
