@@ -43,7 +43,7 @@ const Login = () => {
         <button disabled={status === "loading"}>
           {status === "loading" ? "loading..." : "Login"}
         </button>
-        {error && <p className={styles.Error}>{error}</p>}
+        {error ? <p className={styles.Error}>{error}</p> : ""}
       </form>
     </div>
   );
