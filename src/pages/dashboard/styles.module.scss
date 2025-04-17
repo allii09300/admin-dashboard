@@ -1,0 +1,27 @@
+.DashboardContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: #2980b9;
+  }
+
+  h3 {
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: #c0392b;
+    background-color: #2ecc71;
+  }
+
+  button {
+    outline: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 1px solid #e74c3c;
+    background-color: #e74c3c;
+  }
+}
